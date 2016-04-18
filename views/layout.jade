@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    script(type='text/javascript', src='/javascripts/jquery.js')
+    script(type='text/javascript', src='/javascripts/index.js')
+    block scripts
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block styles
+
+  body
+    block content
