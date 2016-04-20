@@ -1,7 +1,7 @@
 extends layout
 
 block scripts
-    script(type='text/javascript', src='/javascripts/upload.js')
+    script(type='text/javascript', src='/javascripts/main.js')
 
 block styles
     link(rel='stylesheet', href='/stylesheets/upload.css')
@@ -12,9 +12,16 @@ block content
 
     .filecontent#filecontent
 
-    .upload#uploadContainer
+    .upload
+      .uploadContainer#uploadContainer
         h2 Drag pdf file here.
 
         //form(method="post", enctype="multipart/form-data", action="/upload")
             input(type="file", name="pdfFile")
             input(type="submit", value="Submit")
+
+      .uploadProgress#uploadProgress
+        .progressBar
+          .uploadBlocker
+          .uploadCount 0%
+        .uploadResult

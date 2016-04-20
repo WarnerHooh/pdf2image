@@ -39,7 +39,7 @@ router.post('/upload', function(req, res) {
     file.on('end', function() {
       console.log('File [' + fieldname + '] Finished');
 
-      var timeStamp = new Date().format('yyyy年MM月dd日 hh时mm分ss秒');
+      var timeStamp = new Date().format('yyyy_MM_dd_hh_mm_ss');
       var dirPath = path.join(__dirname, '../public/files/', timeStamp);
       console.log(dirPath);
 
@@ -53,7 +53,7 @@ router.post('/upload', function(req, res) {
           console.log('file saved!');
 
           pdf2image(filePath, function() {
-            res.end("Transformed! " + dirPath);
+            res.end(dirPath);
           });
         }
       });

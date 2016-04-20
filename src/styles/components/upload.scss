@@ -1,0 +1,47 @@
+.upload {
+  width: 500px;
+  margin: 0 auto;
+
+  .uploadContainer {
+    height: 200px;
+    border: 1px solid;
+    background: #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .uploadProgress {
+
+    .progressBar {
+      margin: 10px 0;
+      border: 1px solid #0e3e1f;
+      padding: 4px;
+      border-radius: 5px;
+      height: 30px;
+      line-height: 30px;
+      position: relative;
+      overflow: hidden;
+
+      .uploadBlocker {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: #156331;
+      }
+
+      .uploadCount {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        color: #f16209;
+      }
+    }
+
+    .uploadResult {
+
+    }
+
+  }
+}
